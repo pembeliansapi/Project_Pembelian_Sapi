@@ -23,12 +23,16 @@ if (JenisSapi && BeratSapi && UmurSapi && HargaSapi) {
         Harga: HargaSapi
     });
     tampilkanSapi();
+    hitungTotal();
+    document.getElementById("jenis").value = "Pilih Jenis Sapi";
+    document.getElementById("berat").value ;
+    document.getElementById("umur").value ;
 }
 }
 
 function tampilkanSapi() {
     const tableBody = document.getElementById("tabelSapi");
-    tableBody.innerHTML
+    tableBody.innerHTML;
     sapi.forEach((item, index) => {
         const row = tableBody.insertRow();
         row.insertCell(0).textContent = index + 1;
@@ -47,7 +51,18 @@ function hapusSapi(index) {
     if(confirm("Apakah Anda yakin ingin menghapus data ini?")) {
     sapi.splice(index, 1);
     tampilkanSapi();
+    hitungTotal();
 }
+}
+
+function hitungTotal() {
+    let total = sapi.length;
+    let totalNilai = 0;
+    sapi.forEach(item => {
+        totalNilai += item.Harga;
+    });
+    document.getElementById("totalJumlah").textContent = total;
+    document.getElementById("totalNilai").textContent = "Rp " + totalNilai.toLocaleString('id-ID');
 }
 
 document.getElementById("tambahBtn").addEventListener("click", tambahSapi);
