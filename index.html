@@ -6,6 +6,9 @@
 </head>
 
 <body>
+    <div class="navbar">
+    <img src="img/icon home.png" alt="Home"> <span>Home</span>
+    </div>
 
     <h1>Sistem Pembelian Sapi</h1>
 
@@ -13,28 +16,40 @@
 
     <h2>Stok Sapi</h2>
 
-    <label>Jenis Sapi</label><br>
-        <select id="jenis">
-            <option>Pilih Jenis Sapi</option> 
-            <option value="limosin">Limosin</option>
-            <option value="brahman">Brahman</option>
-            <option value="simental">Simental</option>
-            <option value="angus">Angus</option>
-        </select><br>
+    <div class="pesan-sapi">
+    <label>Jenis Sapi :</label>
+    <select id="jenis">
+        <option>Pilih Jenis Sapi</option> 
+        <option value="limosin">Limosin</option>
+        <option value="brahman">Brahman</option>
+        <option value="simental">Simental</option>
+        <option value="angus">Angus</option>
+    </select>
+    </div>
 
-    <label>Berat</label><br>
-    <input type="number" id="berat"><br>
+    <div class="pesan-sapi">
+        <label>Berat :</label>
+        <input type="number" id="berat">
+    </div>
 
-    <label>Umur</label><br>
-    <input type="number" id="umur"><br>
+    <div class="pesan-sapi">
+        <label>Umur :</label>
+        <input type="number" id="umur">
+    </div>
 
-    <button id="tambahBtn">Tambah Sapi</button>
+        <button id="tambahBtn">Tambah Sapi</button>
 
     </div>
 
-    <div id="totalStok">
+    <div id="totalStok"> 
         <p>Total Sapi Terjual: <span id="totalJumlah">0</span></p>
         <p>Total Harga Terjual: <span id="totalNilai">Rp 0</span></p>
+
+        <p> <img src="img/sapi berwarna.png" alt="Sapi" width="80px" height="80px"> 
+        Total Sapi Terjual: <span id="totalJumlah">0</span></p>
+        <p><img src="img/uang.png" alt="Uang" width="70px" height="70px"> 
+        Harga Terjual: <span id="totalNilai">Rp 0</span></p>
+         
     </div>
 
     <h2>Data Sapi Terjual</h2>

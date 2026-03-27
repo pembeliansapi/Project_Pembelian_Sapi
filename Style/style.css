@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #ebedec;
+  line-height: 1.1;
+}
+
+.navbar {
+  display: flex;    
+  align-items: center;
+  gap: 10px; 
+  padding: 10px 50px; 
+  background-color: #064e3b;;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.navbar img {
+  width: 30px;        
+  height: auto;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 0;
+  color: #064e3b;
+  border-bottom: 4px solid rgba(180, 180, 180, 0.3); 
+  padding-bottom: 8px; 
+  margin: 0 auto 30px auto; 
+  width: 700px; 
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.7); 
+  padding: 25px;
+  width: 700px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 0 auto 30px auto;
+  border: 1px solid #ccc;
+  text-align: center; 
+  border: 1px solid #d1fae5;
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: #444;
+  text-align: center;
+}
+
+.pesan-sapi {
+  display: flex;
+  margin: 0; 
+  border: 1px solid #ccc;
+  margin-top: -1px; 
+}
+
+.pesan-sapi label {
+  width: 150px; 
+  background: #f0f0f0;
+  padding: 12px 15px;
+  font-weight: bold;
+  margin: 2px;
+  color: #444;
+  border-right: 1px solid #ccc; 
+  display: flex;
+  align-items: center;
+}
+.pesan-sapi input, .pesan-sapi select {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: transparent;
+  outline: none;
+  margin: 3px; 
+  width: 100%;
+}
+
+button {
+  background: #0c312a;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+  margin-bottom: -5px;
+}
+
+button:hover {
+  background: #254b42;
+}
+
+#totalStok {
+  width: 700px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  gap: 20px;
+}
+#totalStok p {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;    
+  color: #343b39;
+  border-top: 5px solid #0b3023;
+}
+
+#totalStok img {         
+  height: auto;
+  margin: 0;
+}
+table {
+  width: 90%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  margin: 25px auto;
+}
+thead {
+  background: #285849;
+  color: rgb(190, 188, 185);
+}
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+tbody tr:hover {
+  background: #f9f9f9;
+}
+
