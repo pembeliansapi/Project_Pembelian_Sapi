@@ -2,145 +2,228 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 body {
-  background-color: #ebedec;
-  line-height: 1.1;
+  background: linear-gradient(135deg, #ced7d5 0%, #F2EFE9 100%);
+  color: #333;
+  padding-bottom: 50px;
 }
-
 .navbar {
   display: flex;    
   align-items: center;
   gap: 10px; 
   padding: 10px 50px; 
-  background-color: #064e3b;;
+  background-color: #092f25;
   color: white;
   margin-bottom: 20px;
 }
-
-.navbar img {
-  width: 30px;        
-  height: auto;
-}
-
 h1 {
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  font-size: 35px;
   padding: 0;
-  color: #064e3b;
-  border-bottom: 4px solid rgba(180, 180, 180, 0.3); 
+  color: #25300c;
+  border-bottom: 4px solid rgb(187, 190, 190); 
   padding-bottom: 8px; 
   margin: 0 auto 30px auto; 
-  width: 700px; 
+  width: 55%; 
 }
-
-.container {
-  background: rgba(255, 255, 255, 0.7); 
-  padding: 25px;
-  width: 700px; 
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  margin: 0 auto 30px auto;
-  border: 1px solid #ccc;
-  text-align: center; 
-  border: 1px solid #d1fae5;
-}
-
-h2 {
-  margin-bottom: 16px;
-  color: #444;
-  text-align: center;
-}
-
-.pesan-sapi {
+.content {
   display: flex;
-  margin: 0; 
-  border: 1px solid #ccc;
-  margin-top: -1px; 
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 30px;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+.container {
+  background: #365244;
+  padding: 12px;
+  flex: 0.7; 
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+  border: 1px solid #e1e8e5;
+  box-shadow:#666 0px 4px 12px;
+}
+
+.container h2 {
+  margin-bottom: 10px;
+  color: #d8d9cf;
+  font-size: 20px;
+}
+.pesan-sapi {
+    display: flex;
+    margin-bottom: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.pesan-sapi:hover {
+    border-color: #0a7a5c;
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(10, 122, 92, 0.4);
 }
 
 .pesan-sapi label {
-  width: 150px; 
-  background: #f0f0f0;
-  padding: 12px 15px;
-  font-weight: bold;
-  margin: 2px;
-  color: #444;
-  border-right: 1px solid #ccc; 
-  display: flex;
-  align-items: center;
+    width: 120px; 
+    background: #bfc6c3;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-right: 1px solid #ddd;
+    color: #141515;
 }
+
 .pesan-sapi input, .pesan-sapi select {
-  flex: 1;
-  border: 1px solid #ccc;
-  padding: 10px;
-  background: transparent;
-  outline: none;
-  margin: 3px; 
-  width: 100%;
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
 }
 
 button {
-  background: #0c312a;
+  background: #113329;
   color: white;
   border: none;
-  padding: 12px;
+  padding: 13px;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 15px;
-  margin-bottom: -5px;
+  margin-top: 6px;
+  font-size: 15px;
 }
-
 button:hover {
-  background: #254b42;
+  background: #0a7a5c;
+  transform: translateY(-2px);
 }
 
-#totalStok {
-  width: 700px;
-  margin: 0 auto 20px auto;
+#status-container {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
+  width: 450px;
 }
-#totalStok p {
-  flex: 1;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-weight: bold;
+
+#status-container .card:hover {
+  border-color: #173e33;
+  transform: translateX(5px);
+  box-shadow: 0 0 10px rgba(10, 122, 92, 0.4);
+}
+
+#status-container .card1:hover {
+  border-color: #173e33;
+  transform: translateX(5px);
+  box-shadow: 0 0 10px rgba(10, 122, 92, 0.4);
+}
+.card, .card1 {
+  background: #e3ece9;
+  padding: 20px;
+  border-radius: 15px;
+  height: 130px;
+  width: 500px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;    
-  color: #343b39;
-  border-top: 5px solid #0b3023;
+  gap: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-top: 6px solid #023226;
+  box-shadow: 0 8px 25px #141515;
 }
 
-#totalStok img {         
-  height: auto;
-  margin: 0;
+.card img, .card1 img {
+  width: 70px;
+  height: 70px;
 }
-table {
+
+.card .label, .card1 .label {
+  font-size: 20px;
+  color: #1f190b;
+  margin-bottom: 5px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.card .value, .card1 .value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2D6A4F;
+}
+
+.table-container {
   width: 90%;
-  margin-top: 20px;
-  border-collapse: collapse;
-  margin: 25px auto;
+  margin: 30px auto;
+  background: #365244;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px #141515;
 }
-thead {
-  background: #285849;
-  color: rgb(190, 188, 185);
-}
-th, td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+
+.table-title {
+  margin-bottom: 15px;
+  color: #d8d9cf;
+  font-size: 30px;
   text-align: center;
 }
-tbody tr:hover {
-  background: #f9f9f9;
+
+.tabel-sapi {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
+.tabel-sapi thead th {
+  background: #023226;
+  color: white;
+  padding: 12px;
+  border: 1px solid #2e5f4f;
+}
+
+.tabel-sapi td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.tabel-sapi td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #2e5f4f; 
+  color: #ffffff;            
+  vertical-align: middle;
+}
+
+.tabel-sapi tbody tr:nth-child(odd) {
+  background: rgba(106, 123, 115, 0.932); 
+}
+
+.tabel-sapi tbody tr:nth-child(even) {
+  background: rgba(147, 146, 146, 0.893); 
+}
+
+.tabel-sapi td button {
+  background: transparent; 
+  border: none; 
+  width: auto;  
+  padding: 5px;            
+  cursor: pointer;            
+  transition: transform 0.2s; 
+  margin: 0 5px;       
+}
+
+.tabel-sapi td button:hover {
+  transform: scale(1.2);   
+  background: rgba(255, 255, 255, 0.1); 
+}
+
+.tabel-sapi td button img {
+  display: block;
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}

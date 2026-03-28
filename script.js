@@ -59,18 +59,25 @@ function tampilkanSapi() {
         row.insertCell(4).textContent = "Rp " + item.Harga.toLocaleString('id-ID');
         row.insertCell(5).textContent = item.Umur + " tahun";
         row.insertCell(6).textContent = new Date().toLocaleDateString('id-ID');
-        const kolom = row.insertCell(7);
-            const tombolHapus = document.createElement("button");
-            const tombolEdit = document.createElement("button");
-    tombolEdit.textContent = "Edit";
-
-    tombolEdit.onclick = function () {
-    editSapi(index);
-};
-
-kolom.appendChild(tombolEdit);
-            tombolHapus.textContent = "Hapus";
         
+        const kolom = row.insertCell(7);
+        const tombolHapus = document.createElement("button");
+        const tombolEdit = document.createElement("button");
+        tombolEdit.innerHTML = `<img src="img/edit.png">`; 
+        tombolEdit.style.width = "auto";
+        tombolEdit.style.background = "transparent";
+        tombolEdit.style.border = "none";
+        tombolEdit.style.cursor = "pointer";
+        tombolEdit.onclick = function () {
+            editSapi(index);
+        };
+
+        tombolHapus.innerHTML = `<img src="img/delete.png" >`;
+        tombolHapus.style.width = "auto";
+        tombolHapus.style.background = "transparent";
+        tombolHapus.style.border = "none";
+        tombolHapus.style.cursor = "pointer";
+        tombolHapus.style.marginLeft = "10px";
         tombolHapus.onclick = () => {
             if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
                 sapi.splice(index, 1);
@@ -78,6 +85,8 @@ kolom.appendChild(tombolEdit);
                 hitungTotal();
             }
         };
+        
+        kolom.appendChild(tombolEdit);
         kolom.appendChild(tombolHapus);
     });
 }
